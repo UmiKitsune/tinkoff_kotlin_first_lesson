@@ -1,11 +1,10 @@
-package third_task
+package third_task.cat_family
 
 class Puma: Cat() {
-    override val runSpeed: Int = 60
-    override val swimSpeed: Int = 60
-    override var sumSpeed: Int
+    override val runSpeed: Int = 70
+    override val swimSpeed: Int = 45
+    override val sumSpeed: Int
         get() = super.sumSpeed
-        set(value) {}
 
     override fun run() {
         println("I am Puma, and i running")
@@ -14,4 +13,6 @@ class Puma: Cat() {
     override fun swim() {
         println("I am Puma, and i swimming")
     }
+
+
 }

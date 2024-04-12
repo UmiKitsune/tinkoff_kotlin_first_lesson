@@ -2,9 +2,6 @@ package second_task
 
 import java.time.LocalDate
 import java.time.format.DateTimeFormatter
-import kotlin.math.*
-
-//todo: как-то поменять слово символ в зависимости от числа?
 
 fun main() {
     determineType(null)
@@ -26,13 +23,10 @@ fun determineType(obj: Any?) {
 
     val tinkoffFoundationDay = LocalDate.of(2006, 12, 24)
     val dateFormatter = DateTimeFormatter.ofPattern("dd MMM yyyy")
-    //функция для возведения Int в степень и возврат в Int
-    fun exponentiation (number: Int, degree: Int): Int = (number.toDouble().pow(degree)).toInt()
-    //todo You ain't gonna need it?
 
     val answer = when (obj) {
         is String -> "Я получил тип String = '$obj', ее длина равна ${obj.length} символа"
-        is Int -> "Я получил Int = $obj, его квадрат равен ${exponentiation(obj, 2)}"
+        is Int -> "Я получил Int = $obj, его квадрат равен ${obj * obj}"
         is Double -> "Я получил Double = ${obj}, это число округляется до ${"%.2f".format(obj)}"
         is LocalDate ->
             if (obj.isBefore(tinkoffFoundationDay))

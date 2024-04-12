@@ -1,30 +1,31 @@
 package third_task
 
+import third_task.cat_family.Manul
+import third_task.cat_family.Puma
+import third_task.fish_family.Bluefish
+import third_task.fish_family.Dorado
+
 fun main() {
     puma.run()
     puma.swim()
-    print(puma.sumSpeed)
+    println(puma.sumSpeed)
+    println()
+
+    manul.run()
+    manul.swim()
+    println(manul.sumSpeed)
+    println()
+
+    bluefish.swim()
+    println(bluefish.sumSpeed)
+    println()
+
+    dorado.swim()
+    println(dorado.sumSpeed)
+    println()
 }
 
-
 val puma = Puma()
-
-
-/*
-    Задача 3. — 4 балла
-    Дано
-
-    Есть абстрактный класс Pet и два интерфейса Runnable и Swimmable с
-    методами run() и swim() соответственно
-    свойствами скорость бега и плавания - runSpeed и swimSpeed соответственно
-    свойством «суммарная скорость»
-    Есть два класса - Cat, Fish. Cat - может бегать и плавать, Fish - только плавать
-    Каждый из наследников должен явно переопределять методы run или swim и выводить в них на печать сообщение:
-    “I am a Tiger/Cat/Salmon, and i swimming / running”
-
-    Задача :
-    Реализовать некоторое количество (от 2) наследников классов Cat и Fish (например Tiger, Lion и Salmon, Tuna),
-    которые будут реализовывать все методы которые необходимо.
-    Каждый наследник должен высчитывать свойство «суммарная скорость»,
-    при каждом доступе к нему, которое должно быть равно сумме скорости плавания.
-*/
+val manul = Manul()
+val bluefish = Bluefish()
+val dorado = Dorado()
