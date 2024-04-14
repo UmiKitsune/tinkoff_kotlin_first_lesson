@@ -11,6 +11,7 @@ open class Fish: Pet(), Swimmable {
         }
 
     override fun swim() {
-        println("I am Fish, and i swimming")
+        println("I am ${this.javaClass.simpleName}, and i swimming")
     }
+
 }

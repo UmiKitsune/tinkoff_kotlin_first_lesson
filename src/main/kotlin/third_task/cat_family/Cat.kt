@@ -4,7 +4,7 @@ import third_task.Pet
 import third_task.interfaces.Runnable
 import third_task.interfaces.Swimmable
 
-open class Cat : Pet(), Runnable, Swimmable {
+open class Cat() : Pet(), Runnable, Swimmable {
     override val runSpeed: Int = 20
     override val swimSpeed: Int = 20
     override val sumSpeed: Int
@@ -13,10 +13,10 @@ open class Cat : Pet(), Runnable, Swimmable {
         }
 
     override fun run() {
-        println("I am Cat, and i running")
+        println("I am ${this.javaClass.simpleName} and i running")
     }
 
     override fun swim() {
-        println("I am Cat, and i swimming")
+        println("I am ${this.javaClass.simpleName} and i swimming")
     }
 }
